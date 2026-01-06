@@ -2,9 +2,11 @@ describe('Imagens por raça', () => {
 
     it('Deve retornar todas as imagens da por raça', () => {
 
+        const breed = 'hound';
+        
         cy.request({
             method: 'GET',
-            url: 'https://dog.ceo/api/breed/hound/images'
+            url: `/breed/${breed}/images`
         }).then((response) => {
 
             const body = response.body
@@ -36,7 +38,7 @@ describe('Imagem aleatória por raça ', () => {
 
     cy.request({
       method: 'GET',
-      url: 'https://dog.ceo/api/breed/hound/images/random'
+      url: '/breed/hound/images/random'
     }).then((response) => {
 
       const body = response.body
@@ -65,7 +67,7 @@ describe('Múltiplas imagens por raça (hound)', () => {
 
     cy.request({
       method: 'GET',
-      url: `https://dog.ceo/api/breed/hound/images/random/${quantidadeEsperada}`
+      url: `/breed/hound/images/random/${quantidadeEsperada}`
     }).then((response) => {
 
       expect(response.status).to.eq(200)

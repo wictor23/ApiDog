@@ -25,7 +25,7 @@ Este projeto possui uma pipeline configurada no GitHub Actions, que executa os t
 
 ▶️ Trigger manual da pipeline
 
-    A pipeline pode ser executada manualmente através de um botão:
+    A pipeline pode ser executada manualmente através de um botão ou a cada merge nas branch principal:
     Acesse o repositório no GitHub
     Clique em Actions
     Selecione o workflow Cypress Tests

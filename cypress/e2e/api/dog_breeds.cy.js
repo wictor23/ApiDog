@@ -2,7 +2,7 @@ describe('Validação completa de todas as raças', () => {
 
   it('Deve validar todas as raças e sub-raças do body', () => {
 
-    cy.request('GET', 'https://dog.ceo/api/breeds/list/all')
+    cy.request('GET', '/breeds/list/all')
       .then((response) => {
 
         expect(response.status).to.eq(200)

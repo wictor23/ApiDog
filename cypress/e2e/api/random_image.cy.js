@@ -4,7 +4,7 @@ describe('Imagem aleatória de cachorro', () => {
 
         cy.request({
             method: 'GET',
-            url: 'https://dog.ceo/api/breeds/image/random'
+            url: '/breeds/image/random'
         }).then((response) => {
 
 
@@ -29,7 +29,7 @@ describe('Múltiplas imagens aleatórias', () => {
 
         cy.request({
             method: 'GET',
-            url: `https://dog.ceo/api/breeds/image/random/${quantidadeEsperada}`
+            url: `/breeds/image/random/${quantidadeEsperada}`
         }).then((response) => {
 
             const body = response.body

@@ -4,7 +4,7 @@ describe('Imagens da sub-raça hound-afghan', () => {
 
     cy.request({
       method: 'GET',
-      url: 'https://dog.ceo/api/breed/hound/afghan/images'
+      url: '/breed/hound/afghan/images'
     }).then((response) => {
 
       expect(response.status).to.eq(200)
@@ -33,7 +33,7 @@ describe('Imagens da sub-raça hound-afghan', () => {
 
 describe('Imagem aleatória de um unico dog', () => {
   it('Deve retornar uma imagem aleatória dde um unico dog', () => {
-    cy.request('https://dog.ceo/api/breed/hound/afghan/images/random').then((response) => {
+    cy.request('/breed/hound/afghan/images/random').then((response) => {
       expect(response.status).to.eq(200);
       expect(response.body.status).to.eq('success');
       expect(response.body.message).to.be.a('string');
@@ -45,7 +45,7 @@ describe('Imagem aleatória de um unico dog', () => {
 
 describe('Imagens aleatórias da sub-raça hound-afghan', () => {
   it('Deve retornar múltiplas imagens aleatórias da sub-raça hound-afghan', () => {
-    cy.request('https://dog.ceo/api/breed/hound/afghan/images/random/3').then((response) => {
+    cy.request('/breed/hound/afghan/images/random/3').then((response) => {
       expect(response.status).to.eq(200);
       expect(response.body.status).to.eq('success');
       expect(response.body.message).to.be.an('array');
