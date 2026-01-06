@@ -1,0 +1,23 @@
+{
+  "name": "ApiDog",
+  "version": "1.0.0",
+  "description": "ApiDog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wictor23/ApiDog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wictor23/ApiDog/issues"
+  },
+  "homepage": "https://github.com/wictor23/ApiDog#readme",
+  "dependencies": {
+    "cypress": "^15.8.1"
+  }
+}
